@@ -83,6 +83,62 @@
       }
     }
     @media (max-width: 400px) { .paper { grid-template-columns: 1fr; } .paper-thumb { height: 120px; width: 170px; } }
+    .paper {
+      display: grid;
+      grid-template-columns: 38% minmax(0, 1fr);
+      gap: 14px;
+      align-items: stretch;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e5e5;
+      background: transparent;
+    }
+    
+    /* Remove highlight from entire publication */
+    .paper.featured {
+      background: transparent;
+    }
+    
+    /* Publication image */
+    .paper-thumb {
+      width: 100%;
+      height: 230px;
+      background: transparent;
+      border: none;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .paper-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    /* Text area */
+    .paper-info {
+      padding: 16px 18px;
+      border-radius: 10px;
+      background: transparent;
+    }
+    
+    /* Highlight only text area */
+    .paper.featured .paper-info {
+      background: #fff6da;
+    }
+    
+    /* Mobile */
+    @media (max-width: 650px) {
+      .paper {
+        grid-template-columns: 1fr;
+      }
+    
+      .paper-thumb {
+        height: 220px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -159,34 +215,33 @@
       <!-- SAMPLE ENTRY: replace title, authors, venue and link with real publication information. -->
       <article class="paper featured">
 
+        <!-- Image: no highlight -->
         <div class="paper-thumb">
-          <img src="/img/TRO_2020.gif"
-               alt="Publication thumbnail">
+          <img src="/img/paper1.png"
+               alt="Publication image">
         </div>
       
-        <div>
-          <h3>
-            Multirobot collaborative monocular SLAM utilizing rendezvous
-          </h3>
+        <!-- Text: highlighted -->
+        <div class="paper-info">
+      
+          <h3>Publication Title</h3>
       
           <p class="authors">
-            Youngseok Jang
-            <strong>Changsuk Oh</strong>,
-            Yunwoo Lee
-            H Jin Kim
+            Author One, <strong>Changsuk Oh</strong>,
+            Author Three
           </p>
       
           <p class="venue">
-            IEEE Transactions on Robotics (TRO), 2021
+            IEEE Transactions on Robotics, 2021
           </p>
       
           <p class="resources">
             <a href="https://ieeexplore.ieee.org/document/10470408"
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="fa-solid fa-file-pdf"></i> Paper
+               target="_blank" rel="noopener noreferrer">
+              Paper
             </a>
           </p>
+      
         </div>
       
       </article>
