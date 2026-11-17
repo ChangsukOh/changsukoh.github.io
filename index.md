@@ -4,6 +4,9 @@ title: Home
 ---
 
 # Changsuk Oh
+<img src="/img/profile.jpg"
+     alt="Profile photo"
+     width="160">
 
 **Postdoctoral Scholar**  
 Department of Radiological Sciences  
