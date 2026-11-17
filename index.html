@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Changsuk Oh, Postdoctoral Scholar at UCLA.">
+  <title>Changsuk Oh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; --link: #1772d0; --hover: #f09228; --text: #222; --line: #e5e5e5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--text); font: 16px/1.6 'Lato',Verdana,Helvetica,Arial,sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus-visible { color: var(--hover); }
+    .page { max-width: 800px; margin: 0 auto; padding: 46px 20px 72px; }
+    .profile { display: flex; justify-content: center; align-items: stretch; gap: 28px; }
+    .profile-text { flex: 1 1 0; min-width: 0; text-align: center; align-self: center; }
+    .profile-text h1 { font-size: 2.3rem; line-height: 1.2; margin: 0 0 20px; font-weight: 900; letter-spacing: -.03em; }
+    .position { margin: 0 0 4px; font-size: 1.15rem; color: #454545; }
+    .affiliation { margin: 0 0 16px; font-size: 1rem; color: #444; }
+    .profile-links { display: flex; justify-content: center; flex-wrap: wrap; align-items: center; column-gap: 22px; row-gap: 9px; }
+    .profile-links a { display: inline-flex; align-items: center; gap: 7px; font-size: 1rem; white-space: nowrap; }
+    .profile-links svg { width: 19px; height: 19px; flex: 0 0 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .profile-photo { flex: 0 0 158px; width: 158px; align-self: stretch; }
+    .profile-photo img { display: block; width: 100%; height: 100%; min-height: 208px; max-height: 240px; object-fit: cover; object-position: center 22%; border-radius: 12px; }
+    .bio { margin: 32px 0 0; }
+    .bio p { margin: 0 0 13px; }
+    .block { margin-top: 38px; padding-top: 21px; border-top: 1px solid var(--line); }
+    .block h2 { font-size: 1.4rem; line-height: 1.25; margin: 0 0 14px; font-weight: 700; }
+    .news-list { list-style-type: disc; padding-left: 23px; margin: 0; }
+    .news-list li { margin: 3px 0; }
+    .news-toggle { display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; }
+    .news-toggle button { border: none; background: none; font: inherit; font-size: .9rem; color: var(--link); padding: 0; cursor: pointer; }
+    .news-toggle button:hover { color: var(--hover); }
+    [hidden] { display: none !important; }
+    .publications-note { font-size: .87rem; color: #666; margin: -3px 0 14px; }
+    .paper { display: grid; grid-template-columns: 155px minmax(0,1fr); gap: 18px; align-items: center; padding: 12px 10px; margin: 0 -10px; border-radius: 5px; }
+    .paper + .paper { margin-top: 12px; }
+    .paper.featured { background: #fffdf1; }
+    .paper-thumb { height: 100px; border-radius: 3px; overflow: hidden; background: #f0f3f7; display: grid; place-items: center; color: #697587; font-size: .75rem; text-align: center; }
+    .paper-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    .paper h3 { font-size: 1rem; line-height: 1.35; margin: 0 0 3px; font-weight: 700; }
+    .paper .authors { font-size: .92rem; margin: 0; }
+    .paper .venue { font-size: .9rem; font-style: italic; margin: 3px 0; }
+    .paper .resources { font-size: .9rem; margin: 2px 0 0; }
+    .paper .resources a + a:before { content: '|'; color: #999; margin: 0 9px 0 5px; }
+    .footer { margin-top: 55px; text-align: center; border-top: 1px solid var(--line); padding-top: 18px; color: #888; font-size: .78rem; }
+    @media (max-width: 620px) {
+      .page { padding: 30px 20px 50px; }
+      .profile { flex-direction: column-reverse; align-items: center; gap: 19px; }
+      .profile-text { width: 100%; }
+      .profile-text h1 { font-size: 2rem; margin-bottom: 13px; }
+      .profile-photo { width: 150px; flex-basis: auto; }
+      .profile-photo img { width: 150px; height: 190px; min-height: 0; }
+      .bio { margin-top: 25px; }
+      .paper { grid-template-columns: 110px minmax(0,1fr); gap: 13px; }
+      .paper-thumb { height: 84px; }
+    }
+    @media (max-width: 400px) { .paper { grid-template-columns: 1fr; } .paper-thumb { height: 120px; width: 170px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="profile">
+      <div class="profile-text">
+        <h1>Changsuk Oh</h1>
+        <p class="position">Postdoctoral Scholar</p>
+        <p class="affiliation">Department of Radiological Sciences<br>University of California, Los Angeles</p>
+        <nav class="profile-links" aria-label="Academic links">
+          <!-- Replace the Google Scholar URL below with your own profile link. -->
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.2 12 3l10 6.2-10 6.3L2 9.2Z"/><path d="M6 12.3v5.4c3.8 3 8.2 3 12 0v-5.4"/><path d="M21.8 9.5v7.4"/></svg>
+            Google Scholar
+          </a>
+          <!-- Upload your CV as files/CV.pdf to activate this link. -->
+          <a href="/files/CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Curriculum Vitae">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h7l5 5v15H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/><path d="M14 2v6h5M9 13h6M9 17h6"/></svg>
+            Curriculum Vitae
+          </a>
+        </nav>
+      </div>
+      <div class="profile-photo">
+        <!-- Uses the existing photo already in your GitHub repository. -->
+        <img src="/img/ChangsukOh_2025.jpg" alt="Portrait of Changsuk Oh" width="158" height="220">
+      </div>
+    </header>
+
+    <div class="bio">
+      <p>I am a Postdoctoral Scholar in the Department of Radiological Sciences at the University of California, Los Angeles (UCLA). My research focuses on medical image analysis, generative AI, and machine learning for healthcare.</p>
+      <p>My research interests include unsupervised anomaly detection, medical image quality assessment, and longitudinal multimodal learning.</p>
+    </div>
+
+    <section class="block" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="news-list" id="news-list">
+        <li>[Nov. 2026] Launched my academic website.</li>
+        <!-- Add more <li>...</li> lines here; the page shows 5 at a time automatically. -->
+      </ul>
+      <div class="news-toggle">
+        <button id="news-more" type="button" hidden>Show more ▼</button>
+        <button id="news-less" type="button" hidden>Show less ▲</button>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <p class="publications-note">Representative publications are highlighted. Replace the sample publication below with your own papers.</p>
+      <!-- SAMPLE ENTRY: replace title, authors, venue and link with real publication information. -->
+      <article class="paper featured">
+        <div class="paper-thumb" aria-label="Publication thumbnail placeholder">Paper thumbnail</div>
+        <div>
+          <h3>Publication title (replace with your paper)</h3>
+          <p class="authors"><strong>Changsuk Oh</strong>, Coauthor Name</p>
+          <p class="venue">Journal or Conference, Year</p>
+          <p class="resources">Paper link coming soon</p>
+        </div>
+      </article>
+      <!-- Copy an entire <article class="paper">...</article> section to add another publication. -->
+    </section>
+
+    <footer class="footer">Last updated November 2026</footer>
+  </main>
+  <script>
+    (function () {
+      const items = [...document.querySelectorAll('#news-list > li')];
+      const more = document.getElementById('news-more');
+      const less = document.getElementById('news-less');
+      const pageSize = 5;
+      let visible = pageSize;
+      function update() {
+        items.forEach((item, i) => { item.hidden = i >= visible; });
+        more.hidden = visible >= items.length;
+        less.hidden = visible <= pageSize;
+      }
+      more.addEventListener('click', () => { visible = Math.min(items.length, visible + pageSize); update(); });
+      less.addEventListener('click', () => { visible = pageSize; update(); });
+      update();
+    }());
+  </script>
+</body>
+</html>
