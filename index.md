@@ -4,7 +4,7 @@ title: Home
 ---
 
 # Changsuk Oh
-<img src="/img/profile.jpg"
+<img src="/img/ChangsukOh_2025.jpg"
      alt="Profile photo"
      width="160">
 
