@@ -32,7 +32,8 @@
     .block { margin-top: 38px; padding-top: 21px; border-top: 1px solid var(--line); }
     .block h2 { font-size: 1.4rem; line-height: 1.25; margin: 0 0 14px; font-weight: 700; }
     .news-list { list-style-type: disc; padding-left: 23px; margin: 0; }
-    .news-list li { margin: 3px 0; }
+    .news-list li { margin: 5px 0; }
+    .news-date { color: #555; white-space: nowrap; }
     .news-toggle { display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; }
     .news-toggle button { border: none; background: none; font: inherit; font-size: .9rem; color: var(--link); padding: 0; cursor: pointer; }
     .news-toggle button:hover { color: var(--hover); }
@@ -200,12 +201,24 @@
     <section class="block" aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
       <ul class="news-list" id="news-list">
-        <li>[Nov. 2026] Launched my academic website.</li>
-        <!-- Add more <li>...</li> lines here; the page shows 5 at a time automatically. -->
+        <li><span class="news-date">[Nov. 2026]</span> Launched my academic website.</li>
+        <li><span class="news-date">[2026]</span> <a href="https://doi.org/10.1007/s10278-026-02500-2" target="_blank" rel="noopener noreferrer">Our paper on diffusion-based unsupervised MRI anomaly detection was published in <em>Journal of Imaging Informatics in Medicine</em>.</a></li>
+        <li><span class="news-date">[2026]</span> <a href="https://doi.org/10.1007/s12555-026-00234-z" target="_blank" rel="noopener noreferrer">Our paper on geometry- and scene-aware augmentation for monocular 3D object detection was published in <em>International Journal of Control, Automation, and Systems</em>.</a></li>
+        <li><span class="news-date">[2026]</span> <a href="https://jamanetwork.com/journals/jamaotolaryngology/fullarticle/2855171" target="_blank" rel="noopener noreferrer">Our collaborative study on body composition and survival in head and neck cancer radiotherapy was published in <em>JAMA Otolaryngology–Head &amp; Neck Surgery</em>.</a></li>
+        <li><span class="news-date">[2026]</span> <a href="https://www.sciencedirect.com/science/article/pii/S1361841526004020" target="_blank" rel="noopener noreferrer">Our collaborative paper on micro-ultrasound super-resolution using consistency models was published in <em>Medical Image Analysis</em>.</a></li>
+        <li><span class="news-date">[2026]</span> <a href="https://ieeexplore.ieee.org/abstract/document/11515800" target="_blank" rel="noopener noreferrer">Our paper <em>Beyond Zero-Filled Mask</em> was presented orally at IEEE ISBI 2026.</a></li>
+        <li><span class="news-date">[2026]</span> <a href="https://ieeexplore.ieee.org/abstract/document/11515378" target="_blank" rel="noopener noreferrer">Our collaborative papers <em>HiMaC</em> and <em>AICM</em> were presented orally at IEEE ISBI 2026.</a></li>
+        <li><span class="news-date">[2025]</span> <a href="https://ieeexplore.ieee.org/abstract/document/10906374" target="_blank" rel="noopener noreferrer">Our work on real-time moving object detection for 3D LiDAR was published in <em>IEEE Transactions on Instrumentation and Measurement</em>.</a></li>
+        <li><span class="news-date">[2024]</span> <a href="https://ieeexplore.ieee.org/abstract/document/10536158" target="_blank" rel="noopener noreferrer">Our paper on object remover performance evaluation was published in <em>IEEE Sensors Letters</em>.</a></li>
+        <li><span class="news-date">[2024]</span> <a href="https://ieeexplore.ieee.org/abstract/document/10401931" target="_blank" rel="noopener noreferrer">Our paper on automatic pseudo-LiDAR annotation was published in <em>IEEE Access</em>.</a></li>
+        <li><span class="news-date">[2024]</span> <a href="https://ieeexplore.ieee.org/abstract/document/10697977" target="_blank" rel="noopener noreferrer">Our collaborative work on autonomous excavation was published in <em>IEEE Robotics &amp; Automation Magazine</em>.</a></li>
+        <li><span class="news-date">[2022]</span> <a href="https://ieeexplore.ieee.org/abstract/document/9686040" target="_blank" rel="noopener noreferrer">Our collaborative paper on cooperative manipulation skills was published in <em>IEEE Transactions on Automation Science and Engineering</em>.</a></li>
+        <li><span class="news-date">[2021]</span> <a href="https://ieeexplore.ieee.org/abstract/document/9381949" target="_blank" rel="noopener noreferrer">Our collaborative work on multirobot collaborative monocular SLAM was published in <em>IEEE Transactions on Robotics</em>.</a></li>
+        <li><span class="news-date">[2020]</span> <a href="https://ieeexplore.ieee.org/abstract/document/9294734" target="_blank" rel="noopener noreferrer">Our paper on traffic light recognition using a 1D CNN appeared at IEEE ITSC 2020.</a></li>
       </ul>
       <div class="news-toggle">
-        <button id="news-more" type="button" hidden>Show more ▼</button>
-        <button id="news-less" type="button" hidden>Show less ▲</button>
+        <button id="news-more" type="button" aria-controls="news-list" hidden>Show more ▼</button>
+        <button id="news-less" type="button" aria-controls="news-list" hidden>Show less ▲</button>
       </div>
     </section>
 
@@ -315,6 +328,38 @@
         </div>
       
       </article>
+
+      <article class="featured paper">
+
+        <!-- Image: no highlight -->
+        <div class="paper-thumb">
+          <img src="/img/2026_ISBI_CSO.gif"
+               alt="Publication image">
+        </div>
+      
+        <!-- Text: highlighted -->
+        <div class="paper-info">
+      
+          <h3>Beyond Zero-Filled Mask: Inpainting Quality Enhancement via Neural Implicit Guidance Prior</h3>
+      
+          <p class="authors">
+            <strong>Changsuk Oh</strong>, Kaifeng Pang, Ricky Savjani, Kyunghyun Sung
+          </p>
+      
+          <p class="venue">
+            2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI), 2026 (ORAL)
+          </p>
+      
+          <p class="resources">
+            <a href="https://ieeexplore.ieee.org/abstract/document/11515800"
+               target="_blank" rel="noopener noreferrer">
+              Paper
+            </a>
+          </p>
+      
+        </div>
+      
+      </article> 
       
       <article class="paper">
 
@@ -348,38 +393,6 @@
         </div>
       
       </article>
-
-       <article class="featured paper">
-
-        <!-- Image: no highlight -->
-        <div class="paper-thumb">
-          <img src="/img/2026_ISBI_CSO.gif"
-               alt="Publication image">
-        </div>
-      
-        <!-- Text: highlighted -->
-        <div class="paper-info">
-      
-          <h3>Beyond Zero-Filled Mask: Inpainting Quality Enhancement via Neural Implicit Guidance Prior</h3>
-      
-          <p class="authors">
-            <strong>Changsuk Oh</strong>, Kaifeng Pang, Ricky Savjani, Kyunghyun Sung
-          </p>
-      
-          <p class="venue">
-            2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI), 2026 (ORAL)
-          </p>
-      
-          <p class="resources">
-            <a href="https://ieeexplore.ieee.org/abstract/document/11515800"
-               target="_blank" rel="noopener noreferrer">
-              Paper
-            </a>
-          </p>
-      
-        </div>
-      
-      </article> 
       
       <article class="paper">
 
