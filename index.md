@@ -1,14 +1,18 @@
+
 ---
 layout: default
 title: Home
 ---
 
 <div class="profile-header">
+
   <div class="profile-info">
 
     <h1>Changsuk Oh</h1>
 
-    <p class="position">Postdoctoral Scholar</p>
+    <p class="position">
+      Postdoctoral Scholar
+    </p>
 
     <p class="affiliation">
       Department of Radiological Sciences<br>
@@ -31,8 +35,10 @@ title: Home
 
   <div class="profile-photo">
     <img src="/img/ChangsukOh_2025.jpg"
-         alt="Changsuk Oh">
+         alt="Changsuk Oh"
+         style="width:235px;height:280px;object-fit:cover;border-radius:20px;">
   </div>
+
 </div>
 
 <p>
