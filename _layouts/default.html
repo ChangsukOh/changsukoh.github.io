@@ -46,6 +46,97 @@
     img {
       max-width: 100%;
     }
+    
+    /* Profile header */
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin: 35px 0 45px;
+    }
+    
+    /* Left side */
+    .profile-info {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .profile-info h1 {
+      font-size: 48px;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+    
+    .profile-info .position {
+      font-size: 23px;
+      margin: 0 0 10px;
+      color: #444;
+    }
+    
+    .profile-info .affiliation {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #444;
+      margin: 0 0 25px;
+    }
+    
+    /* Google Scholar and CV */
+    .profile-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .profile-links a {
+      font-size: 20px;
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    .profile-links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Right side photo */
+    .profile-photo {
+      flex: 0 0 235px;
+    }
+    
+    .profile-photo img {
+      width: 235px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+    
+    /* Mobile layout */
+    @media (max-width: 650px) {
+      .profile-header {
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
+    
+      .profile-photo {
+        flex: none;
+      }
+    
+      .profile-info h1 {
+        font-size: 36px;
+      }
+    
+      .profile-info .position {
+        font-size: 20px;
+      }
+    
+      .profile-info .affiliation,
+      .profile-links a {
+        font-size: 17px;
+      }
+    }
+
   </style>
 </head>
 
