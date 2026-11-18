@@ -67,12 +67,22 @@
     .paper .resources { font-size: .9rem; margin: 2px 0 0; }
     .paper .resources a + a:before { content: '|'; color: #999; margin: 0 9px 0 5px; }
     .footer { margin-top: 55px; text-align: center; border-top: 1px solid var(--line); padding-top: 18px; color: #888; font-size: .78rem; }
+    /* Mobile profile layout */
     @media (max-width: 620px) {
+    
+      /* Stack photo above profile information */
+      .profile {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+    
+      /* Center profile photo */
       .profile-photo {
-        flex: 0 0 auto;
+        flex: none;
         width: 150px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         align-self: center;
       }
     
@@ -80,8 +90,30 @@
         display: block;
         width: 150px;
         height: 190px;
+        min-height: 0;
+        max-height: none;
         object-fit: cover;
         margin: 0 auto;
+      }
+    
+      /* Center profile information */
+      .profile-text {
+        width: 100%;
+        flex: none;
+        text-align: center;
+      }
+    
+      .profile-text h1 {
+        font-size: 2rem;
+        margin-bottom: 13px;
+      }
+    
+      .profile-links {
+        justify-content: center;
+      }
+    
+      .bio {
+        margin-top: 25px;
       }
     }
     @media (max-width: 400px) { .paper { grid-template-columns: 1fr; } .paper-thumb { height: 120px; width: 170px; } }
