@@ -116,61 +116,22 @@
         margin-top: 25px;
       }
     }
-    @media (max-width: 400px) { .paper { grid-template-columns: 1fr; } .paper-thumb { height: 120px; width: 170px; } }
-    .paper {
-      display: grid;
-      grid-template-columns: 38% minmax(0, 1fr);
-      gap: 14px;
-      align-items: stretch;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e5e5;
-      background: transparent;
-    }
     
-    /* Remove highlight from entire publication */
-    .paper.featured {
-      background: transparent;
-    }
     
-    /* Publication image */
-    .paper-thumb {
-      width: 100%;
-      height: 230px;
-      background: transparent;
-      border: none;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .paper-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-    
-    /* Text area */
-    .paper-info {
-      padding: 16px 18px;
-      border-radius: 10px;
-      background: transparent;
-    }
-    
-    /* Highlight only text area */
-    .paper.featured .paper-info {
-      background: #fff6da;
-    }
-    
-    /* Mobile */
+    /* Mobile publication layout */
     @media (max-width: 650px) {
       .paper {
         grid-template-columns: 1fr;
+        gap: 12px;
       }
     
       .paper-thumb {
+        width: 100%;
         height: 220px;
+      }
+    
+      .paper-info {
+        padding: 14px 16px;
       }
     }
   </style>
