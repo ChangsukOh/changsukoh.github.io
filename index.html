@@ -68,19 +68,20 @@
     .paper .resources a + a:before { content: '|'; color: #999; margin: 0 9px 0 5px; }
     .footer { margin-top: 55px; text-align: center; border-top: 1px solid var(--line); padding-top: 18px; color: #888; font-size: .78rem; }
     @media (max-width: 620px) {
-      .paper {
-        grid-template-columns: 1fr;
+      .profile-photo {
+        flex: 0 0 auto;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
       }
-      .profile { flex-direction: column-reverse; align-items: center; gap: 19px; }
-      .profile-text { width: 100%; }
-      .profile-text h1 { font-size: 2rem; margin-bottom: 13px; }
-      .profile-photo { width: 150px; flex-basis: auto; }
-      .profile-photo img { width: 150px; height: 190px; min-height: 0; }
-      .bio { margin-top: 25px; }
-      .paper { grid-template-columns: 110px minmax(0,1fr); gap: 13px; }
-      .paper-thumb {
-        width: 100%;
+    
+      .profile-photo img {
+        display: block;
+        width: 150px;
         height: 190px;
+        object-fit: cover;
+        margin: 0 auto;
       }
     }
     @media (max-width: 400px) { .paper { grid-template-columns: 1fr; } .paper-thumb { height: 120px; width: 170px; } }
@@ -190,7 +191,7 @@
       where I was advised by
       Prof. <a href="https://larr.snu.ac.kr/"
              target="_blank" rel="noopener noreferrer">H. Jin Kim</a>.
-      My research focuses on <strong>medical image analysis using AI</strong>strong> and <strong>generative AI</strong>, 
+      My research focuses on <strong>medical image analysis using AI</strong> and <strong>generative AI</strong>, 
       with particular interests in brain MRI analysis, unsupervised anomaly detection in MRI, 
       and AI-driven prediction of brain metastasis.
     </p>
